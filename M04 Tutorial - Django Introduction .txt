@@ -1,0 +1,193 @@
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Judys-MacBook-Pro-2:~ judyng$ ls
+Applications                                    Music                                           __pycache__
+Chrome                                          OneDrive - The Pennsylvania State University    anaconda3
+Desktop                                         Pictures                                        api
+Documents                                       Public                                          application.py
+Downloads                                       TerminalTest                                    book
+Library                                         Vagrantfile                                     ubuntu
+Movies                                          VirtualBox VMs                                  vagrant_getting_started
+(base) Judys-MacBook-Pro-2:~ judyng$ cd Desktop
+(base) Judys-MacBook-Pro-2:Desktop judyng$ ls
+Documents       Ivy Tech        Penn State      Resume          Work
+(base) Judys-MacBook-Pro-2:Desktop judyng$ cd 'Ivy Tech'
+(base) Judys-MacBook-Pro-2:Ivy Tech judyng$ ls
+DBMS110 SDEV120 SDEV140 SDEV153 SDEV220
+(base) Judys-MacBook-Pro-2:Ivy Tech judyng$ cd SDEV220
+(base) Judys-MacBook-Pro-2:SDEV220 judyng$ ls
+Jupyter Notebook program                M02_Lab.py                              hello_world_test.py
+M01 Tutorial.docx                       M03_Lab
+M02_CL_Test                             Screenshot 2024-01-27 at 6.03.03 PM.png
+(base) Judys-MacBook-Pro-2:SDEV220 judyng$ mkdir djangogirls
+(base) Judys-MacBook-Pro-2:SDEV220 judyng$ cd djangogirls
+(base) Judys-MacBook-Pro-2:djangogirls judyng$ python3 -m venv myvenv
+(base) Judys-MacBook-Pro-2:djangogirls judyng$ python3 -m venv myvenv
+(base) Judys-MacBook-Pro-2:djangogirls judyng$ sudo apt install python3-venv
+Password:
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+(base) Judys-MacBook-Pro-2:djangogirls judyng$ apt install python3-venv
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+(base) Judys-MacBook-Pro-2:djangogirls judyng$ apt install python3-venv
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+(base) Judys-MacBook-Pro-2:djangogirls judyng$ source myvenv/bin/activate
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python -m pip install --upgrade pip
+Requirement already satisfied: pip in ./myvenv/lib/python3.12/site-packages (23.2.1)
+Collecting pip
+  Obtaining dependency information for pip from https://files.pythonhosted.org/packages/8a/6a/19e9fe04fca059ccf770861c7d5721ab4c2aebc539889e97c7977528a53b/pip-24.0-py3-none-any.whl.metadata
+  Downloading pip-24.0-py3-none-any.whl.metadata (3.6 kB)
+Downloading pip-24.0-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 9.7 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.2.1
+    Uninstalling pip-23.2.1:
+      Successfully uninstalled pip-23.2.1
+Successfully installed pip-24.0
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ touch requirements.txt
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ ls
+myvenv                  requirements.txt
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ pip install -r requirements.txt
+Collecting Django~=3.2.10 (from -r requirements.txt (line 1))
+  Downloading Django-3.2.24-py3-none-any.whl.metadata (4.0 kB)
+Collecting asgiref<4,>=3.3.2 (from Django~=3.2.10->-r requirements.txt (line 1))
+  Downloading asgiref-3.7.2-py3-none-any.whl.metadata (9.2 kB)
+Collecting pytz (from Django~=3.2.10->-r requirements.txt (line 1))
+  Downloading pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting sqlparse>=0.2.2 (from Django~=3.2.10->-r requirements.txt (line 1))
+  Downloading sqlparse-0.4.4-py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.2/41.2 kB 1.0 MB/s eta 0:00:00
+Downloading Django-3.2.24-py3-none-any.whl (7.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 18.0 MB/s eta 0:00:00
+Downloading asgiref-3.7.2-py3-none-any.whl (24 kB)
+Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 505.5/505.5 kB 13.5 MB/s eta 0:00:00
+Installing collected packages: pytz, sqlparse, asgiref, Django
+Successfully installed Django-3.2.24 asgiref-3.7.2 pytz-2024.1 sqlparse-0.4.4
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ source myvenv/bin/activate
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ django-admin startproject mysite .
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 12, 2024 - 04:46:06
+Django version 3.2.24, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[12/Feb/2024 04:46:38] "GET / HTTP/1.1" 200 10760
+[12/Feb/2024 04:46:38] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[12/Feb/2024 04:46:39] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[12/Feb/2024 04:46:39] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[12/Feb/2024 04:46:39] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[12/Feb/2024 04:46:39] "GET /favicon.ico HTTP/1.1" 404 2110
+
+^C(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py startapp blog
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py makemigrations blog
+Migrations for 'blog':
+  blog/migrations/0001_initial.py
+    - Create model Post
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py migrate blog
+Operations to perform:
+  Apply all migrations: blog
+Running migrations:
+  Applying blog.0001_initial... OK
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py createsuperuser
+Benutzername (leave blank to use 'judyng'): 
+E-Mail-Adresse: jng5@ivytech.edu
+Password: 
+Password (again): 
+Error: Your passwords didn't match.
+Password: 
+Password (again): 
+Dieses Passwort ist zu kurz. Es muss mindestens 8 Zeichen enthalten.
+Dieses Passwort ist zu üblich.
+Dieses Passwort ist komplett numerisch. 
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 12, 2024 - 04:54:54
+Django version 3.2.24, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[12/Feb/2024 04:54:57] "GET /admin/ HTTP/1.1" 302 0
+[12/Feb/2024 04:54:57] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2227
+[12/Feb/2024 04:54:57] "GET /static/admin/css/login.css HTTP/1.1" 200 939
+[12/Feb/2024 04:54:57] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[12/Feb/2024 04:54:57] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[12/Feb/2024 04:54:57] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+[12/Feb/2024 04:54:57] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+[12/Feb/2024 04:54:57] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[12/Feb/2024 04:54:57] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[12/Feb/2024 04:54:57] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[12/Feb/2024 04:55:08] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2411
+[12/Feb/2024 04:55:08] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[12/Feb/2024 04:55:25] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2411
+^C(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py createsuperuser
+Benutzername: judy
+E-Mail-Adresse: judyng816@yahoo.com
+Password: 
+Password (again): 
+Dieses Passwort ist zu kurz. Es muss mindestens 8 Zeichen enthalten.
+Dieses Passwort ist zu üblich.
+Dieses Passwort ist komplett numerisch. 
+Bypass password validation and create user anyway? [y/N]: n
+Password: 
+Password (again): 
+Superuser created successfully.
+(myvenv) (base) Judys-MacBook-Pro-2:djangogirls judyng$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 12, 2024 - 04:56:47
+Django version 3.2.24, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[12/Feb/2024 04:56:50] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2411
+[12/Feb/2024 04:56:50] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[12/Feb/2024 04:56:50] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[12/Feb/2024 04:57:01] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2414
+[12/Feb/2024 04:57:01] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[12/Feb/2024 04:57:22] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2414
